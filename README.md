@@ -4,7 +4,7 @@ Download Data from the SEC-EDGAR and do Rudimentary Sentiment Analysis on it.
 wrote a code to download the SEC-EDGAR data but didnt added here as you said.
 wrote a code to  plot the graph between 1.)sentiment polarity score score vs quartor 
                                         2.)sentiment polarity score vs year
-         saved and added those graphs here.
+         ,saved and added those graphs here.
                             
                             
                             
