@@ -124,18 +124,17 @@ for yr in f1.years:
       #create a path (for ex: "figures/1995") and save the figure (plot of sentimental_score of 4 quarters in 1 figure) there
         os.makedirs('/'.join([figures_path,str(yr)]))  
         fig1.savefig('/'.join([figures_path,str(yr),'plot.png']))   
-        plt.close()
+      plt.close()
             
     #append the mean of the yearly_y list to the avg_y list
       avg_y.append(statistics.mean(yearly_y))   
  
 
- #plot a graph of sentimental_score vs year 
-fig, axes = plt.subplots(1,1) 
-axes[0,0].set_title("yearwise distribution of sentiment score", fontsize=18)
-axes[0,0].set_xlabel('year', fontsize=18)
-axes[0,0].set_ylabel('good_sentiment score', fontsize=18)
-axes[0,0].plot(f1.years,avg_y)  
+#plot a graph of sentimental_score vs year 
+plt.plot(f1.years,avg_y)
+plt.title("yearwise distribution of sentiment score", fontsize=18)
+plt.xlabel('year', fontsize=18)
+plt.ylabel('good_sentiment score', fontsize=18)  
 plt.xticks(rotation=90)  
 fig.savefig('figures/year_vs_sentiment_score_plot.png')
 plt.close()
